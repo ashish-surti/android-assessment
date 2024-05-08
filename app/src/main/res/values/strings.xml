@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Universities</string>
+    <string name="title_activity_university_details">UniversityDetails</string>
+</resources>
