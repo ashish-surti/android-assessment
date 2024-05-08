@@ -53,7 +53,6 @@ class MainActivity : ComponentActivity() {
             val data by viewModel.universitiesResponse.observeAsState()
             UniversitiesTheme {
 
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -115,6 +114,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    // show local database data if API error occurs
     @Composable
     private fun showLocalData() {
         val localData by viewModel.localUniversities.observeAsState()
@@ -154,10 +154,12 @@ class MainActivity : ComponentActivity() {
 
     }
 
+    // make api call to server
     private fun callApi() {
         viewModel.getUniversities()
     }
 
+    // save the universities from the server to the local database
     private fun saveLocalUniversity(universities: List<UniversityModel>) {
         universities.forEach { university ->
             viewModel.insertUniversity(university)
@@ -165,6 +167,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+// a view to show all the universities either local or from server
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun UniversityList(infoMessage: String, universities: List<UniversityModel>) {

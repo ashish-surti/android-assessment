@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+// table to store the domains of the university
 @Entity
 data class LocalDomains(
     @PrimaryKey(autoGenerate = true) val id: Int,

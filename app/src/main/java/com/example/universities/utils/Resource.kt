@@ -1,5 +1,6 @@
 package com.example.universities.utils
 
+// universal object for the status of the data
 data class Resource<out T>(val status: Status, val data: T?, val message: String?) {
 
     enum class Status {

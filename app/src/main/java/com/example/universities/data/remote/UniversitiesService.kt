@@ -5,6 +5,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+// all the http method will be stored here
 interface UniversitiesService {
 
     @GET("search")

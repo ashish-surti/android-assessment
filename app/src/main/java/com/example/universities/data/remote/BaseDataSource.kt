@@ -4,6 +4,7 @@ import android.util.Log
 import com.example.universities.utils.Resource
 import retrofit2.Response
 
+// universal api call for all the apis in the project
 abstract class BaseDataSource {
 
     protected suspend fun <T> getResult(call: suspend () -> Response<T>): Resource<T> {

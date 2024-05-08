@@ -13,6 +13,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+// dependency injection for the api call
 @Module
 @InstallIn(SingletonComponent::class)
 class AppModule {

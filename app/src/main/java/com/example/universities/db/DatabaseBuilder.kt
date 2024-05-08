@@ -3,6 +3,8 @@ package com.example.universities.db
 import androidx.room.Room
 import com.example.universities.MainApplication
 
+
+// main database class to store the data in the room database
 object DatabaseBuilder {
 
     private var INSTANCE: AppDatabase? = null

@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+// table to store the university
 @Entity
 data class LocalUniversity(
     @PrimaryKey(autoGenerate = true) val id: Int,
@@ -11,4 +12,4 @@ data class LocalUniversity(
     @ColumnInfo(name = "name") val name: String? = null,
     @ColumnInfo(name = "stateProvince") val stateProvince: String? = null,
     @ColumnInfo(name = "alphaTwoCode") val alphaTwoCode: String? = null
-    )
+)
